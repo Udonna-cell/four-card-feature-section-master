@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+body {
+  min-height: 100vh;
+  padding: 2.5rem 1.5rem;
+  padding-top: 5.5rem;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--Very-Light-Gray);
+  color: var(--Very-Dark-Blue);
+  /* color: var(--Grayish-Blue); */
+  /* text-align: center; */
+}
+header > p {
+  font-weight: 200;
+  margin: 1.6rem 0;
+}
+h1 {
+  font-weight: 200;
+  font-size: 1.7em;
+}
+h1.bold {
+  font-weight: 600;
+}
+h2 {
+  font-weight: 600;
+}
+figure {
+  text-align: end;
+  margin-top: 1.7rem;
+}
+.container {
+  margin: 3.4rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.item {
+  background: #fff;
+  border-radius: 7px;
+  padding: 1.5rem;
+  box-shadow: 1px 5px 20px 0px hsla(229, 6%, 66%, 0.5);
+}
+.item > p {
+  font-weight: 200;
+  margin: 1.6rem 0;
+}
+
+section.container > section.item:nth-child(1) {
+  border-top: 5px solid var(--Cyan);
+}
+section.container > section.item:nth-child(2) {
+  border-top: 5px solid var(--Red);
+}
+section.container > section.item:nth-child(3) {
+  border-top: 5px solid var(--Orange);
+}
+section.container > section.item:nth-child(4) {
+  border-top: 5px solid var(--Blue);
+}
+
+@media (min-width: 767px) {
+    body{
+        text-align: center;
+    }
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    header > p {
+        width: calc(100vw / 2);
+        text-align: center;
+        text-wrap: pretty;
+        /* background-color: red; */
+    }
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        
+    }
+    .container > .item:nth-child(1) {
+        /* grid-row: 2 / 3; */
+        grid-column: 1 / 2;
+    }
+    .container > .item:nth-child(2) {
+        /* grid-row: 3 / 4; */
+        grid-column: 2 / 3;
+    }
+    .container > .item:nth-child(3) {
+        /* grid-row: 2 / 3; */
+        grid-column: 2 / 3;
+    }
+    .container > .item:nth-child(4) {
+        /* grid-row: 3 / 3; */
+        grid-column: 3 / 4;
+    }
+
+}
