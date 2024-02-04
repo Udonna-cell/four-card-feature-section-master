@@ -89,21 +89,22 @@ section.container > section.item:nth-child(4) {
         flex-direction: column;
     }
     header > p {
-        width: calc(100vw / 2);
+        width: calc(100px * 4.9);
         text-align: center;
         text-wrap: pretty;
         /* background-color: red; */
     }
     .container {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, calc(103px * 3.5));
         grid-template-rows: repeat(4, calc(150px / 1.5));
-        
+        gap: 2.7rem;
     }
     .item {
-      /* justify-self: center; */
-      /* align-self: center; */
+      justify-self: center;
+      align-self: center;
       margin: 0;
+      text-align: start;
     }
     .container > .item:nth-child(1) {
         grid-row: 2 / 4;
